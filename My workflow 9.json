@@ -1,0 +1,1385 @@
+{
+  "name": "My workflow 9",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 30
+            }
+          ]
+        }
+      },
+      "name": "Schedule Every 30min",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2000,
+        336
+      ],
+      "id": "4a34bd6a-094f-484e-aefe-16e16707122d"
+    },
+    {
+      "parameters": {
+        "url": "https://hnrss.org/frontpage",
+        "options": {}
+      },
+      "name": "Hacker News",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1792,
+        -480
+      ],
+      "id": "2f14d020-325e-4936-b4e6-bbdc399004c8",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+        "options": {}
+      },
+      "name": "TechCrunch AI",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1792,
+        -288
+      ],
+      "id": "6aff4f2f-dd0c-4275-8f4e-a73598671585",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "http://export.arxiv.org/rss/cs.AI",
+        "options": {}
+      },
+      "name": "ArXiv AI",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1792,
+        -96
+      ],
+      "id": "25291594-9036-4c28-9ea5-6320522e5c1a",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "http://export.arxiv.org/rss/cs.LG",
+        "options": {}
+      },
+      "name": "ArXiv ML",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1792,
+        64
+      ],
+      "id": "f859f2f2-9c44-418b-9fb6-c993afe80ae0",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "http://export.arxiv.org/rss/cs.CL",
+        "options": {}
+      },
+      "name": "ArXiv NLP",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1792,
+        224
+      ],
+      "id": "39df7545-15e0-4c9e-b2fb-109b30da8a1a",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "http://export.arxiv.org/rss/cs.CV",
+        "options": {}
+      },
+      "name": "ArXiv CV",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1792,
+        464
+      ],
+      "id": "097e5716-7120-4215-a1ca-0f1417fc3466",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://openai.com/blog/rss.xml",
+        "options": {}
+      },
+      "name": "OpenAI Blog",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1792,
+        624
+      ],
+      "id": "e19a9c5c-925f-44a5-8ca8-9aa38197d3bd",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://ai.googleblog.com/feeds/posts/default",
+        "options": {}
+      },
+      "name": "Google AI Blog",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1792,
+        784
+      ],
+      "id": "660c49e7-e854-42cd-9ee9-1e11ab289549",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://deepmind.google/blog/rss.xml",
+        "options": {}
+      },
+      "name": "DeepMind Blog",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1792,
+        976
+      ],
+      "id": "7341a545-d303-4a0b-990d-8171748bafd0",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.anthropic.com/news/rss.xml",
+        "options": {}
+      },
+      "name": "Anthropic Blog",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1808,
+        1168
+      ],
+      "id": "592ffeaf-e0c7-4855-98b4-fdf953847c97",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://huggingface.co/blog/feed.xml",
+        "options": {}
+      },
+      "name": "Hugging Face",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1344,
+        -480
+      ],
+      "id": "4fcbcc54-e256-470c-8181-7a8f202ab09e",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+        "options": {}
+      },
+      "name": "MIT Tech Review",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1344,
+        -288
+      ],
+      "id": "cefdbe9f-b480-4e2f-a78f-4af582ac8720",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://venturebeat.com/category/ai/feed/",
+        "options": {}
+      },
+      "name": "VentureBeat AI",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1312,
+        -96
+      ],
+      "id": "8dde60f5-5485-4db0-a9fb-24cb8ef76e50",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.marktechpost.com/feed/",
+        "options": {}
+      },
+      "name": "MarkTechPost",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1296,
+        112
+      ],
+      "id": "44801da0-d497-400e-ac10-84a8bca29a2b",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://towardsdatascience.com/feed",
+        "options": {}
+      },
+      "name": "Towards Data Science",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1328,
+        304
+      ],
+      "id": "3edc280d-df08-4be7-9864-c571ee5a9b32",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://github.blog/category/ai-ml/feed/",
+        "options": {}
+      },
+      "name": "GitHub AI",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1296,
+        496
+      ],
+      "id": "910e7a8f-ef48-47aa-8668-37e3780e77ec",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss",
+        "options": {}
+      },
+      "name": "IEEE AI",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1312,
+        624
+      ],
+      "id": "85284326-a961-4626-a61f-0cee1f3ec3f1",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg",
+        "options": {}
+      },
+      "name": "Two Minute Papers",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1328,
+        768
+      ],
+      "id": "852756e5-01e0-47d7-8392-a918aacb865c",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew",
+        "options": {}
+      },
+      "name": "Yannic Kilcher",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1328,
+        976
+      ],
+      "id": "1b6bcf82-4a42-4ae9-89d8-a0f6ca1a3527",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw",
+        "options": {}
+      },
+      "name": "AI Explained",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -1344,
+        1216
+      ],
+      "id": "dfe2c5f5-ec1d-44c8-827c-c24dc3f79fb6",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCfQgsKhHjSyRLOp9mnffqVg",
+        "options": {}
+      },
+      "name": "ML Street Talk",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -736,
+        -384
+      ],
+      "id": "3314e6f8-87ba-43d3-8fd3-f2bf7ce2415f",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCj8shE7aFxxvzW6mYPDqVIg",
+        "options": {}
+      },
+      "name": "The AI Epiphany",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -736,
+        -192
+      ],
+      "id": "ac36f03f-ee71-4299-a95d-6cc22795db3c",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCNIkB2IeJ-6AmZv7bQ1oBYg",
+        "options": {}
+      },
+      "name": "Arxiv Insights",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -736,
+        16
+      ],
+      "id": "6324e4e9-975e-4d80-8098-926219eafbc5",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSHZKyawb77ixDdsGog4iWA",
+        "options": {}
+      },
+      "name": "Lex Fridman",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -720,
+        208
+      ],
+      "id": "a8c744c0-e205-416e-b9c6-fd5d96c887e9",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCiZxJB0xWfPBE2omVZeWPpQ",
+        "options": {}
+      },
+      "name": "Sentdex",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -736,
+        512
+      ],
+      "id": "7f79457a-810c-4a48-8026-124a01f469c9",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCr8O8l5cCX85Oem1d18EezQ",
+        "options": {}
+      },
+      "name": "3Blue1Brown",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -736,
+        720
+      ],
+      "id": "e4fef959-6f57-4e7e-ab71-640be4870434",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC4JX40jDee_tINbkjycV4Sg",
+        "options": {}
+      },
+      "name": "Andrej Karpathy",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -736,
+        880
+      ],
+      "id": "d480b1f0-481f-4025-af56-1930840c2e43",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {},
+      "name": "Merge All Sources",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2,
+      "position": [
+        -16,
+        352
+      ],
+      "id": "5b1f12f7-9f3a-4d01-905c-85bf5cfd4a0c"
+    },
+    {
+      "parameters": {
+        "jsCode": "// NORMALIZE & DEDUPLICATE\nconst staticData = $getWorkflowStaticData('global');\nconst now = new Date();\nconst hour = parseInt(now.toLocaleTimeString('vi-VN', {timeZone: 'Asia/Ho_Chi_Minh', hour: '2-digit', hour12: false}));\n\n// 1. Hour Filter (7:00-24:00)\nif (hour < 7) {\n  const queuedItems = staticData.queuedItems || [];\n  const newItems = $input.all().map(i => i.json);\n  staticData.queuedItems = [...queuedItems, ...newItems].slice(-100);\n  return [];\n}\n\nlet items = $input.all();\nif (hour === 7 && staticData.queuedItems?.length > 0) {\n  items = [...staticData.queuedItems.map(json => ({json})), ...items];\n  staticData.queuedItems = [];\n}\n\n// 2. Heavy Deduplication\nconst sentUrls = new Set((staticData.sentUrls || []).map(u => u.toLowerCase().replace(/\\/+$/, '')));\nconst results = [];\nconst seenInBatch = new Set();\n\nfor (const item of items) {\n  let url = item.json.link || item.json.url || item.json.guid;\n  if (!url) continue;\n  \n  // Normalize URL\n  const normUrl = url.toLowerCase().trim().replace(/\\/+$/, '');\n  \n  if (sentUrls.has(normUrl) || seenInBatch.has(normUrl)) continue;\n  seenInBatch.add(normUrl);\n  \n  let desc = item.json.description || item.json.content || item.json.summary || '';\n  desc = desc.replace(/<[^>]*>/g, '').substring(0, 300);\n  const isYT = url.includes('youtube.com') || url.includes('youtu.be');\n\n  results.push({\n    json: {\n      title: item.json.title || 'No title',\n      description: desc,\n      url: url,\n      normUrl: normUrl, // Keep for internal tracking\n      source: item.json.source || item.json.creator || item.json.author || 'Unknown',\n      pubDate: item.json.pubDate || item.json.isoDate || new Date().toISOString(),\n      isVideo: isYT,\n      mediaType: isYT ? '🎬 Video' : '📄 Article'\n    }\n  });\n}\n\n// 3. Limit processing to 5 items per batch for absolute safety\nconst finalItems = results.slice(0, 5);\n\n// 4. Update memory IMMEDIATELY to prevent double-processing if workflow restarts\nconst newSent = [...(staticData.sentUrls || []), ...finalItems.map(i => i.json.normUrl)];\nstaticData.sentUrls = newSent.slice(-5000); // Keep last 5000\n\nreturn finalItems;"
+      },
+      "name": "Smart Timing & Clean",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        192,
+        352
+      ],
+      "id": "ac36f03f-ee71-4299-a95d-6cc22795db3c"
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "name": "Process One by One",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        592,
+        352
+      ],
+      "id": "9bd2054f-7bc4-4c0c-baff-19d090e67166"
+    },
+    {
+      "parameters": {
+        "amount": 8,
+        "unit": "seconds"
+      },
+      "name": "Wait 8s (Free Tier Safe)",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        832,
+        336
+      ],
+      "id": "c65672d6-0a21-4ba4-b910-67bbe3fd9e57",
+      "webhookId": "536328d8-aee6-47bb-be8b-0cbf9957506c"
+    },
+    {
+      "parameters": {
+        "model": "llama-3.1-8b-instant",
+        "options": {}
+      },
+      "name": "Groq Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        1232,
+        16
+      ],
+      "id": "f058c6a5-2f99-4440-9a40-4a3470cedd7c",
+      "credentials": {
+        "groqApi": {
+          "id": "acCvLJWVpzbCym1z",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là AI chuyên gia phân tích tin tức AI/Tech. Phân tích:\n\nTitle: {{ $json.title }}\nDescription: {{ $json.description }}\nURL: {{ $json.url }}\nMedia: {{ $json.mediaType }}\n\nTrả về CHỈ JSON:\n{\"summary\": \"tóm tắt 2-3 câu tiếng Việt\", \"score\": 8, \"category\": \"LLM\", \"sentiment\": \"Tích cực\", \"impact\": \"Cao\", \"key_points\": [\"điểm 1\", \"điểm 2\"], \"recommendation\": \"must_read\"}\n\nCategories: LLM, ML_Research, Computer_Vision, NLP, AI_Tools, AI_Coding, AI_Products, AI_Ethics, Robotics, Tutorial, General_Tech\nScore: 9-10 breakthrough, 7-8 important, 5-6 interesting, 1-4 skip"
+      },
+      "name": "AI Analysis",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        1200,
+        336
+      ],
+      "id": "0c71d5e5-2963-459e-bec0-c5ccb15e8ba2",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// IMPROVEMENT #4: PERSONAL INTEREST FILTER\nconst items = $input.all();\nconst staticData = $getWorkflowStaticData('global');\nconst favorites = staticData.favoriteCategories || ['LLM', 'AI_Coding', 'AI_Tools'];\nconst results = [];\n\n// Get original data from the loop start node to prevent data loss\nconst originalItem = $('Process One by One').item.json;\n\nfor (const item of items) {\n  try {\n    let resp = item.json.response?.text || item.json.text || item.json.output || JSON.stringify(item.json);\n    const m = resp.match(/\\{[\\s\\S]*\\}/);\n    if (m) {\n      const p = JSON.parse(m[0]);\n      let score = Math.min(10, Math.max(1, parseInt(p.score) || 5));\n      \n      // BOOST score for favorite categories\n      if (favorites.includes(p.category)) {\n        score = Math.min(10, score + 2);\n      }\n      \n      results.push({\n        json: {\n          title: originalItem.title || item.json.title || 'No title',\n          description: originalItem.description || item.json.description || '',\n          url: originalItem.url || item.json.url || '',\n          source: originalItem.source || item.json.source || 'Unknown',\n          pubDate: originalItem.pubDate || item.json.pubDate || '',\n          isVideo: originalItem.isVideo || item.json.isVideo || false,\n          mediaType: originalItem.mediaType || item.json.mediaType || '📄 Article',\n          ai_response: {\n            summary: p.summary || 'Không có tóm tắt',\n            score: score,\n            originalScore: parseInt(p.score) || 5,\n            category: p.category || 'General_Tech',\n            key_points: p.key_points || [],\n            recommendation: p.recommendation || 'optional',\n            sentiment: p.sentiment || 'N/A',\n            impact: p.impact || 'N/A',\n            isFavorite: favorites.includes(p.category)\n          }\n        }\n      });\n    }\n  } catch (e) { console.log('Parse error:', e.message); }\n}\nreturn results;"
+      },
+      "name": "Parse & Boost Favorites",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1776,
+        336
+      ],
+      "id": "946b43a6-b4e6-4103-8983-ac11bdb59633"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Pass through - data comes from loop output\nreturn $input.all();"
+      },
+      "name": "Collect Results",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        592,
+        560
+      ],
+      "id": "5a90aa24-19c4-42b3-a243-891794784119"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.ai_response.score }}",
+              "operation": "largerEqual",
+              "value2": 7
+            }
+          ]
+        }
+      },
+      "name": "Filter Score >= 7",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1872,
+        560
+      ],
+      "id": "ff082627-2b7e-46f6-b554-0ecb2c8f5bb6"
+    },
+    {
+      "parameters": {
+        "jsCode": "// IMPROVEMENT #1: PRIORITY QUEUE - Sort by score DESC\nconst items = $input.all();\nconst sorted = items.sort((a, b) => {\n  const scoreA = a.json.ai_response?.score || 0;\n  const scoreB = b.json.ai_response?.score || 0;\n  return scoreB - scoreA;\n});\nconst limited = sorted.slice(0, 5);\n\n// Helper to escape HTML special characters\nconst escapeHTML = (text) => {\n  if (!text) return '';\n  return text.toString().replace(/[&<>\"]/g, (m) => ({\n    '&': '&amp;',\n    '<': '&lt;',\n    '>': '&gt;',\n    '\"': '&quot;'\n  }[m]));\n};\n\nreturn limited.map((item, idx) => {\n  const d = item.json;\n  const ai = d.ai_response;\n  const kp = ai.key_points?.length > 0 ? ai.key_points.map(p => `  • ${escapeHTML(p)}`).join('\\n') : '  • Xem chi tiết';\n  \n  const msg = `<b>TIÊU ĐỀ: ${escapeHTML(d.title.toUpperCase())}</b>\\n\\nĐiểm: ${ai.score}/10 | Category: ${escapeHTML(ai.category.replace('_', ' '))}\\nKhuyến nghị: ${escapeHTML(ai.recommendation)}\\nSắc thái: ${escapeHTML(ai.sentiment || 'N/A')} | Tầm quan trọng: ${escapeHTML(ai.impact || 'N/A')}\\n\\nTóm tắt:\\n${escapeHTML(ai.summary)}\\n\\nĐiểm nổi bật:\\n${kp}\\n\\nLink bài viết: ${d.url}\\n\\nThời gian: ${new Date().toLocaleString('vi-VN', {timeZone: 'Asia/Ho_Chi_Minh'})}`;\n  const itemId = Date.now() + '_' + idx;\n  return {\n    json: {\n      ...d,\n      telegram_message: msg,\n      item_id: itemId,\n      inline_keyboard: [[{text: '📖 Đọc ngay', url: d.url}, {text: '⭐ Lưu lại', callback_data: `save_${itemId}`}], [{text: '❌ Bỏ qua', callback_data: `skip_${itemId}`}]]\n    }\n  };\n});"
+      },
+      "name": "Priority Sort & Format",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2192,
+        256
+      ],
+      "id": "1b54b6db-8414-4ef5-a0cc-b3d021f69c4d"
+    },
+    {
+      "parameters": {
+        "chatId": "8451246837",
+        "text": "={{ $json.telegram_message }}",
+        "additionalFields": {
+          "disable_web_page_preview": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "name": "Send to Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        2432,
+        256
+      ],
+      "id": "0ff40ed5-4ab8-4bb9-8f89-9c3ccaf89d35",
+      "webhookId": "5663e4d3-c026-4d57-9704-10288e7a70e6",
+      "credentials": {
+        "telegramApi": {
+          "id": "6aQWTexhP1o073dj",
+          "name": "Telegram account 2"
+        }
+      },
+      "retryOnFail": true,
+      "maxRetries": 5,
+      "waitBetweenRetries": 10000
+    },
+    {
+      "parameters": {
+        "filePath": "/Users/duc/Downloads/n8n/archive.csv"
+      },
+      "name": "Read Archive File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        800
+      ],
+      "id": "read-archive-file-id",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "name": "CSV to JSON",
+      "type": "n8n-nodes-base.spreadsheetFile",
+      "typeVersion": 2,
+      "position": [
+        1220,
+        800
+      ],
+      "id": "csv-to-json-id",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Flatten for CSV\nreturn $input.all().map(item => {\n  const d = item.json;\n  return {\n    json: {\n      Time: new Date().toLocaleString('vi-VN'),\n      Title: d.title,\n      URL: d.url,\n      Score: d.ai_response?.score || 'N/A',\n      Category: d.ai_response?.category || 'N/A',\n      Summary: d.ai_response?.summary || 'N/A',\n      Sentiment: d.ai_response?.sentiment || 'N/A',\n      Impact: d.ai_response?.impact || 'N/A',\n      Source: d.source\n    }\n  };\n});"
+      },
+      "name": "Format for CSV",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1000,
+        600
+      ],
+      "id": "format-for-csv-id"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "mergeByPosition"
+      },
+      "name": "Merge New & Old",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2,
+      "position": [
+        1440,
+        650
+      ],
+      "id": "merge-new-old-id"
+    },
+    {
+      "parameters": {
+        "operation": "toBinaryFile",
+        "options": {}
+      },
+      "name": "JSON to CSV",
+      "type": "n8n-nodes-base.spreadsheetFile",
+      "typeVersion": 2,
+      "position": [
+        1660,
+        650
+      ],
+      "id": "json-to-csv-id"
+    },
+    {
+      "parameters": {
+        "fileName": "/Users/duc/Downloads/n8n/archive.csv"
+      },
+      "name": "Write Archive File",
+      "type": "n8n-nodes-base.writeBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        1880,
+        650
+      ],
+      "id": "write-archive-file-id"
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "name": "Batch Telegram",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        2100,
+        50
+      ],
+      "id": "batch-telegram-id"
+    },
+    {
+      "parameters": {
+        "amount": 15,
+        "unit": "seconds"
+      },
+      "name": "Wait 15s (Strict)",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2350,
+        50
+      ],
+      "id": "wait-15s-id",
+      "webhookId": "strict-wait-webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Every 30min": {
+      "main": [
+        [
+          {
+            "node": "Hacker News",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "TechCrunch AI",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ArXiv AI",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ArXiv ML",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ArXiv NLP",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ArXiv CV",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "OpenAI Blog",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google AI Blog",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "DeepMind Blog",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Anthropic Blog",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Hugging Face",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "MIT Tech Review",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "VentureBeat AI",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "MarkTechPost",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Towards Data Science",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "GitHub AI",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IEEE AI",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Two Minute Papers",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Yannic Kilcher",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "AI Explained",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ML Street Talk",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "The AI Epiphany",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Arxiv Insights",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Lex Fridman",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Sentdex",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "3Blue1Brown",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Andrej Karpathy",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hacker News": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TechCrunch AI": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ArXiv AI": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ArXiv ML": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ArXiv NLP": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ArXiv CV": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Blog": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google AI Blog": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DeepMind Blog": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Blog": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hugging Face": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MIT Tech Review": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "VentureBeat AI": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MarkTechPost": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Towards Data Science": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GitHub AI": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IEEE AI": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Two Minute Papers": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Yannic Kilcher": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Explained": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ML Street Talk": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "The AI Epiphany": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Arxiv Insights": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lex Fridman": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sentdex": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3Blue1Brown": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Andrej Karpathy": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge All Sources": {
+      "main": [
+        [
+          {
+            "node": "Smart Timing & Clean",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Smart Timing & Clean": {
+      "main": [
+        [
+          {
+            "node": "Process One by One",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process One by One": {
+      "main": [
+        [
+          {
+            "node": "Wait 8s (Free Tier Safe)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Collect Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 8s (Free Tier Safe)": {
+      "main": [
+        [
+          {
+            "node": "AI Analysis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Analysis",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Analysis": {
+      "main": [
+        [
+          {
+            "node": "Parse & Boost Favorites",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse & Boost Favorites": {
+      "main": [
+        [
+          {
+            "node": "Process One by One",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Collect Results": {
+      "main": [
+        [
+          {
+            "node": "Filter Score >= 7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Format for CSV",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Read Archive File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Archive File": {
+      "main": [
+        [
+          {
+            "node": "CSV to JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CSV to JSON": {
+      "main": [
+        [
+          {
+            "node": "Merge New & Old",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Format for CSV": {
+      "main": [
+        [
+          {
+            "node": "Merge New & Old",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge New & Old": {
+      "main": [
+        [
+          {
+            "node": "JSON to CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "JSON to CSV": {
+      "main": [
+        [
+          {
+            "node": "Write Archive File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Score >= 7": {
+      "main": [
+        [
+          {
+            "node": "Priority Sort & Format",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Priority Sort & Format": {
+      "main": [
+        [
+          {
+            "node": "Batch Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Batch Telegram": {
+      "main": [
+        [
+          {
+            "node": "Wait 15s (Strict)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 15s (Strict)": {
+      "main": [
+        [
+          {
+            "node": "Send to Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send to Telegram": {
+      "main": [
+        [
+          {
+            "node": "Batch Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "aa392f0f-32d7-45c4-8e3e-aa5a6d0e0b93",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "639d9a4b428fd5654618e112ff334b60d0a994075dfac9505316294cf6214cab"
+  },
+  "id": "_mEALToArsx6OwRp7gRMO",
+  "tags": []
+}
