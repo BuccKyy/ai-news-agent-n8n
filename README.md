@@ -1,3 +1,19 @@
+# AI News Automation Agent (n8n)
+
+> English summary first; the original Vietnamese documentation follows below.
+
+An n8n workflow that runs every 30 minutes, pulls AI and tech news from **27 RSS sources** (Hacker News, TechCrunch AI, arXiv AI/ML/NLP/CV, AI lab blogs, Hugging Face, YouTube channels and more), scores each item with an LLM via **Groq**, and sends only items that score **7/10 or higher** to Telegram, sorted by priority and batched to stay within rate limits.
+
+![Workflow](docs/workflow-screenshot.png)
+
+**Pipeline:** schedule (30 min) → 27 RSS feeds → merge → time filter and clean-up → one item at a time (8 s spacing) → LLM analysis (Groq) → parse and boost favourites → keep score ≥ 7 → priority sort and format → batched Telegram messages (15 s spacing).
+
+**Run it:** import `workflow.json` (self-hosted) or `workflow.cloud.json` (n8n Cloud), add Groq and Telegram credentials, and replace `YOUR_TELEGRAM_CHAT_ID` in the Telegram node. See `QUICK-START.md` and `TROUBLESHOOTING.md`.
+
+**Stack:** n8n · Groq LLM · RSS · Telegram Bot API · MIT license
+
+---
+
 # 🤖 AI News Automation Agent (v9.0)
 
 Chào mừng bạn đến với hệ thống tự động hóa tin tức AI toàn diện. Hệ thống này được thiết kế để hoạt động 24/7 trên nền tảng đám mây (Hugging Face / n8n), tự động **thu thập tin tức AI/Tech từ 27 nguồn**, **phân tích bằng AI (Groq/LLaMA)**, và **gửi tin quan trọng đến Telegram**.
@@ -188,11 +204,11 @@ Thời gian: 29/01/2026, 20:05:30
 ### File Workflow
 | File | Mô tả |
 |------|-------|
-| `My workflow 9.json` | Bản gốc, dùng cho chạy Local (có lưu CSV) |
-| `My workflow 9_cloud.json` | **Khuyên dùng** - Bản tối ưu cho Cloud |
+| `workflow.json` | Bản gốc, dùng cho chạy Local (có lưu CSV) |
+| `workflow.cloud.json` | **Khuyên dùng** - Bản tối ưu cho Cloud |
 
 ### Cách Import
-1. Download file `My workflow 9_cloud.json`
+1. Download file `workflow.cloud.json`
 2. Trong n8n, vào **Settings** → **Import from file**
 3. Chọn file JSON
 4. Vào **Credentials** → Kết nối lại:
@@ -211,8 +227,8 @@ Nếu muốn thay đổi ngưỡng lọc tin (ví dụ chỉ nhận tin cực ho
 
 ```
 n8n/
-├── My workflow 9.json          # Workflow gốc (local)
-├── My workflow 9_cloud.json    # Workflow cho cloud (khuyên dùng)
+├── workflow.json          # Workflow gốc (local)
+├── workflow.cloud.json    # Workflow cho cloud (khuyên dùng)
 ├── README.md                   # Tài liệu chính (file này)
 ├── WORKFLOW_ARCHITECTURE.md    # Kiến trúc workflow
 ├── WORKFLOW_EXPLANATION.md     # Giải thích chi tiết

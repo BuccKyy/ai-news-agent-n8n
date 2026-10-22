@@ -221,7 +221,7 @@ Thời gian: 29/01/2026, 20:05:30
 - Telegram Bot Token
 
 ### Cách import
-1. Download file `My workflow 9_cloud.json`
+1. Download file `workflow.cloud.json`
 2. Trong n8n, vào **Settings > Import from file**
 3. Chọn file JSON
 4. Cấu hình credentials (Groq, Telegram)
@@ -232,8 +232,8 @@ Thời gian: 29/01/2026, 20:05:30
 
 ```
 n8n/
-├── My workflow 9.json          # Workflow gốc (local)
-├── My workflow 9_cloud.json    # Workflow cho cloud
+├── workflow.json          # Workflow gốc (local)
+├── workflow.cloud.json    # Workflow cho cloud
 ├── README.md                   # Tài liệu chính
 ├── WORKFLOW_EXPLANATION.md     # Giải thích chi tiết (file này)
 ├── WORKFLOW_ARCHITECTURE.md    # Kiến trúc workflow
